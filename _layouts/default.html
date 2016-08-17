@@ -5,32 +5,28 @@
 
   <body>
 
-    <!-- This if statement decides which sidebar to use -->
-    {% if page.toc %}
-    {% include sidebar-toc.html %}
-    {% else %}
-    {% include sidebar.html %}
-    {% endif %}
-
-
-
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <br><small>{{ site.tagline }}</small>
+            <br><small>{{ site.tagline }}</small> <br>
           </h3>
+	<br>
         </div>
+	<div class="hlink_container">
+	  <small><a href="#" class="hlink">درباره‌ی من</a></small>
+	  <small><a href="#" class="hlink">بلاگ انگلیسی</a></small>
+	  <small><a href="http://py4.ir/stuff" class="hlink">همینجوری‌ها</a></small>
+	</div>
+
       </div>
 
       <div class="container content" id="main">
         {{ content }}
       </div>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     <script>
 
